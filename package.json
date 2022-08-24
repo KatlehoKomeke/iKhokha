@@ -1,0 +1,34 @@
+{
+  "name": "ikhokha",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint",
+    "build": "tsc",
+    "format": "npx prettier --write .",
+    "start": "node ./build/Main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KatlehoKomeke/iKhokha.git"
+  },
+  "author": "Katleho Komeke",
+  "bugs": {
+    "url": "https://github.com/KatlehoKomeke/iKhokha/issues"
+  },
+  "homepage": "https://github.com/KatlehoKomeke/iKhokha#readme",
+  "devDependencies": {
+    "@types/node": "^18.7.9",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}

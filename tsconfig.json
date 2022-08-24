@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+
+    "paths": {
+      "dotenv": ["./node_modules/jquery/dist/dotenv"] // This mapping is relative to "baseUrl"
+    },
+
+    "moduleResolution": "node",
+
+    "outDir": "build",
+
+    /* Language and Environment */
+    "target": "esnext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+
+    /* Modules */
+    "module": "esnext" /* Specify what module code is generated. */,
+
+    /* Emit */
+    "removeComments": true /* Disable emitting comments. */,
+
+    /* Interop Constraints */
+    "isolatedModules": true /* Ensure that each file can be safely transpiled without relying on other imports. */,
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+
+    /* Type Checking */
+    "strict": true /* Enable all strict type-checking options. */,
+    "noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied 'any' type. */,
+    "strictNullChecks": true /* When type checking, take into account 'null' and 'undefined'. */,
+
+    /* Completeness */
+    "skipDefaultLibCheck": true /* Skip type checking .d.ts files that are included with TypeScript. */,
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */
+  }
+}
