@@ -4,10 +4,10 @@
 
 import { readdir, readFile } from "fs";
 import { CommentAnalyzer } from "./classes/CommentAnalyzer";
-import path from "path";
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// import path from "path";
+// import { fileURLToPath } from "url";
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 import dotenv from "dotenv";
 // import { isMainThread , Worker } from "worker_threads";
 
@@ -51,17 +51,20 @@ function createReport(
           // eslint-disable-next-line max-len
           // 	worker.postMessage({path:pathToDocs + fileName, options: { encoding: "utf8" }, commentAnalyzer:new CommentAnalyzer(new Map<string, bigint>()) });
           // }
-          // eslint-disable-next-line max-len
           readFile(
             pathToDocs + fileName,
             { encoding: "utf8" },
-            (error, data): void => {
-              addReportResults(
-                commentAnalyzer.analyze(data),
-                asyncTotalResults
-              );
-              if (index === files.length - 1) {
-                printTotalResults(asyncTotalResults);
+            async (error, data): Promise<void> => {
+              if (error) {
+                console.error(error);
+              }{
+                await addReportResults(
+                  commentAnalyzer.analyze(data),
+                  asyncTotalResults
+                );
+                if (index === files.length - 1) {
+                  printTotalResults(asyncTotalResults);
+                }
               }
             }
           );
